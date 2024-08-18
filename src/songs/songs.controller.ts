@@ -6,11 +6,11 @@ export class SongsController {
     constructor(private songService: SongsService){}
     @Post()
     create() {
-        return "create a new song endpoint";
+        return this.songService.create("Animals by Martin Garrix");
     }
     @Get() 
     findAll() {
-        return "find all songs endpoint";
+        return this.songService.findAll();
     }
     @Get(":id")
     findOne() {
